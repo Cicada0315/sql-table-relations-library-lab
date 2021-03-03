@@ -38,12 +38,12 @@ end
 
 def select_series_title_with_most_human_characters
   "Write your SQL query here"
-  "SELECT series.title, COUNT(series.title) AS CT
+  "SELECT series.title
   FROM series
   INNER JOIN characters
   WHERE characters.species='human'
   GROUP BY series.title
-  ORDER BY CT
+  ORDER BY COUNT(series.title)
   LIMIT 1;"
   
   # WORNG TRY AGAIN.
